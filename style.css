@@ -35,13 +35,20 @@ header {
 
 main {
     display: none;
+    margin-top: 10px;
 }
 
 h1 {
     color: white;
     text-align: center;
-    font-size: 29px;
+    font-size: 40px;
     padding: 10px;
+    background-color: #613535;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
 }
 
 .carousel {
@@ -50,6 +57,7 @@ h1 {
     overflow: hidden;
     width: 300px;
     border-radius: 10px;
+    margin-bottom: 9px;
 }
 
 .carousel img {
@@ -68,13 +76,14 @@ h1 {
 
 .footer {
     margin: auto;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     background-color: #613535;
     text-align: justify;
     font-size: 18px;
     color: white;
     width: 500px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .footer p {
@@ -88,13 +97,19 @@ h1 {
 }
 
 @media screen and (max-width: 500px) {
+    h1 {
+        font-size: 30px;
+        width: 88vw;
+    }
+
     .footer {
-    width: 85vw;
+        width: 85vw;
     }
 
     .carousel {
         width: 93vw;
     }
+
     .carousel img {
         width: 85vw;
         height: 500px;
