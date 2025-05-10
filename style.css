@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #3d3a3a;
+    background: radial-gradient(#a01717,#2e2a2a);
 }
 
 header {
@@ -25,11 +25,21 @@ header {
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+    animation: animateBtn 2s steps(10) infinite;
+}
+
+@keyframes animateBtn {
+    0%, 94%, 100% { 
+        filter: none;
+    }
+    95% { 
+        filter: drop-shadow(0 0 50px #ff4e4e) drop-shadow(0 0 150px #ff4e4e);
+    }
 }
 
 .center-btn:hover {
     background-color: #FA0707;
-    box-shadow: 0 0px 60px #fa07b1c4;
+    box-shadow: 0 0px 60px #000000c4;
     transform: scale(1.05);
 }
 
