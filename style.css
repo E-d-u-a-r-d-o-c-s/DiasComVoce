@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #3d3a3a;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.center-btn {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #f51414;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.center-btn:hover {
+    background-color: #FA0707;
+    box-shadow: 0 0px 60px #fa07b1c4;
+    transform: scale(1.05);
+}
+
+main {
+    display: none;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 29px;
+    padding: 10px;
+}
+
+.carousel {
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.carousel img {
+    width: 300px;
+    height: 430px;
+    object-fit: cover;
+    display: inline-block;
+    animation: slide 20s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+0% { transform: translateX(0); }
+100% { transform: translateX(-3790px); } /* 300px * 6 imagens */
+}
+
+.footer {
+    margin: auto;
+    padding: 20px 20px 20px 20px;
+    background-color: #613535;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.footer p {
+    text-indent: 20px;
+}
+
+#diasContador {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+    width: 85vw;
+    }
+
+    .carousel {
+        width: 93vw;
+    }
+    .carousel img {
+        width: 85vw;
+        height: 500px;
+    }
+}

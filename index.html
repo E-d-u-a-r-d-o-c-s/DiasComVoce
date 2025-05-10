@@ -3,198 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Romântica</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #332C2C;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      align-content: flex-start;
-    }
-
-    .center-btn {
-      font-size: 24px;
-      padding: 15px 30px;
-      background-color: #f51414;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .center-btn:hover {
-      background-color: #FA0707;
-      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
-      transform: scale(1.05);
-    }
-
-    .carousel {
-      margin: auto;
-      display: none;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 300px;
-    }
-
-    .carousel img {
-      width: 300px;
-      height: 430px;
-      object-fit: cover;
-      display: inline-block;
-      animation: slide 10s linear infinite;
-    }
-
-  @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1750px); } /* 300px * 6 imagens */
-  }
-
-    .footer {
-      margin: auto;
-      display: none;
-      padding: 20px 20px 20px 20px;
-      background-color: #503838;
-      text-align: center;
-      font-size: 18px;
-      color: white;
-      width: 260px;
-      height: 1000px;
-    }
-
-    #diasContador {
-      font-weight: 500;
-      font-size: 20px;
-    }
-    
-    @media screen and (max-width: 500px) {
-      .carousel {
-      
-      }
-      .carousel img {
-
-      }
-
-      .footer {
-        width: 85vw;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>Dias Com Você</title>
 </head>
 <body>
     <header>
       <div class="hearts" id="hearts"></div>
       <button class="center-btn" id="startBtn">Clique aqui!</button>
-    </header>
-  <div class="carousel" id="carousel">
-    <!-- Substitua os caminhos abaixo pelas imagens do casal -->
-    <img src="imagens/retiro.jpeg" alt="Foto 1">
-    <img src="imagens/ladoaLado.jpeg" alt="Foto 2">
-    <img src="imagens/nasCostas.jpeg" alt="Foto 3">
-    <img src="imagens/camisaCombinado.jpeg" alt="Foto 4">
-    <img src="imagens/cristo.jpeg" alt="Foto 5">
-    <img src="imagens/noEstrela.jpeg" alt="Foto 6">
-    <img src="imagens/retiro.jpeg" alt="Foto 1">
-    <img src="imagens/ladoaLado.jpeg" alt="Foto 2">
-    <img src="imagens/nasCostas.jpeg" alt="Foto 3">
-    <img src="imagens/camisaCombinado.jpeg" alt="Foto 4">
-    <img src="imagens/cristo.jpeg" alt="Foto 5">
-    <img src="imagens/noEstrela.jpeg" alt="Foto 6">
+    </header>  
+  <main>
+    <h1>TE AMO GABRIELY 🥰</h1>
+    <div class="carousel" id="carousel">
+      <!-- Substitua os caminhos abaixo pelas imagens do casal -->
+      <img src="imagens/noretiro.jpeg" alt="Foto 1">
+      <img src="imagens/ladoalado.jpeg" alt="Foto 2">
+      <img src="imagens/nasCostas.jpeg" alt="Foto 3">
+      <img src="imagens/naChuva.jpeg" alt="Foto 4">
+      <img src="imagens/cristo.jpeg" alt="Foto 5">
+      <img src="imagens/noChão.jpeg" alt="Foto 6">
+      <img src="imagens/18Anos.jpeg" alt="Foto 7">
+      <img src="imagens/noEstrela.jpeg" alt="Foto 8">
+      <img src="imagens/camisaCombinado.jpeg" alt="Foto 9">
+      <img src="imagens/naigreja.jpeg" alt="Foto 10">
+      <img src="imagens/caminhando.jpeg" alt="Foto11">
+      <img src="imagens/noShow.jpeg" alt="Foto 12">
+      <img src="imagens/jantar.jpeg" alt="Foto 13">
+      <img src="imagens/noretiro.jpeg" alt="Foto 1">
+      <img src="imagens/ladoalado.jpeg" alt="Foto 2">
+      <img src="imagens/nasCostas.jpeg" alt="Foto 3">
+      <img src="imagens/naChuva.jpeg" alt="Foto 4">
+      <img src="imagens/cristo.jpeg" alt="Foto 5">
+      <img src="imagens/noChão.jpeg" alt="Foto 6">
+      <img src="imagens/18Anos.jpeg" alt="Foto 7">
+      <img src="imagens/noEstrela.jpeg" alt="Foto 8">
+      <img src="imagens/camisaCombinado.jpeg" alt="Foto 9">
+      <img src="imagens/naigreja.jpeg" alt="Foto 10">
+      <img src="imagens/caminhando.jpeg" alt="Foto11">
+      <img src="imagens/noShow.jpeg" alt="Foto 12">
+      <img src="imagens/jantar.jpeg" alt="Foto 13">
+  
+    </div>
+    <div class="footer" id="footer">
+      <p>Estar ao seu lado tem sido a melhor parte dos meus dias. Cada momento você é um presente, cada riso compartilhado, uma lembrança eterna. Não importa quanto tempo passe — ao seu lado tudo é leve, tudo faz sentido. Que venham mais dias, meses e anos, porque meu lugar favorito continua sendo ao seu lado. 💖</p>
+      <br>
+      <p id="diasContador"></p>
+  </main>
   </div>
-  <div class="footer" id="footer">
-    <p>Estar ao seu lado tem sido a melhor parte dos meus dias. Cada momento contigo é um presente, cada riso compartilhado, uma lembrança eterna. Não importa quanto tempo passe — ao seu lado tudo é leve, tudo faz sentido. Que venham mais dias, meses e anos, porque meu lugar favorito continua sendo ao seu lado. 💖</p>
-    <br>
-    <p id="diasContador"></p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor maxime atque laudantium excepturi aspernatur, explicabo accusamus doloremque magnam voluptatem cupiditate neque est consequuntur exercitationem eum repudiandae fugit? Aperiam, aut possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut ipsum unde ipsam, labore quidem laudantium placeat earum! Reprehenderit incidunt a sequi numquam excepturi! Suscipit culpa porro nemo quasi ad blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus officiis sit nisi reprehenderit quia odit fugiat obcaecati aliquid hic quam rem repellendus porro exercitationem praesentium, omnis debitis repudiandae quisquam expedita.</p>
-  </div>
-
-  <script>
-    const startBtn = document.getElementById('startBtn');
-    const carousel = document.getElementById('carousel');
-    const footer = document.getElementById('footer');
-    const diasContador = document.getElementById('diasContador');
-
-    startBtn.addEventListener('click', () => {
-      document.querySelector('header').style.display = 'none';
-      startBtn.style.display = 'none';
-      carousel.style.display = 'block';
-      footer.style.display = 'block';
-    });
-
-    // Contador de tempo desde o início do relacionamento
-    const dataInicio = new Date('2025-03-02'); // Altere para a data do início do relacionamento
-    const hoje = new Date();
-
-    let anos = hoje.getFullYear() - dataInicio.getFullYear();
-    let meses = hoje.getMonth() - dataInicio.getMonth();
-    let dias = hoje.getDate() - (dataInicio.getDate() + 1);
-
-    if (anos == 0 && meses == 0 && dias == 0) {
-      diasContador.textContent = "Hoje é o nosso primeiro dia juntos! 💖";
-    } else if (anos == 0 && meses == 0 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${dias} dia!`;
-    } else if (anos ==0 && meses == 0 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${dias} dias!`;
-    } else if (anos == 0 && meses == 1 && dias == 0) {
-      diasContador.textContent = `Estamos juntos há ${meses} mês!`;
-    } else if (anos == 0 && meses == 1 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${meses} mês e ${dias} dia!`;
-    } else if (anos == 0 && meses == 1 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${meses} mês e ${dias} dias!`;
-    } else if (anos == 0 && meses > 1 && dias == 0) {
-      diasContador.textContent = `Estamos juntos há ${meses} meses!`;
-    } else if (anos == 0 && meses > 1 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${meses} meses e ${dias} dia!`;
-    } else if (anos == 0 && meses > 1 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${meses} meses e ${dias} dias!`;
-    } else if (anos == 1 && meses == 0 && dias == 0) {
-      diasContador.textContent = `Estamos completando ${anos} ano juntos!`;
-    } else if (anos == 1 && meses == 0 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano e ${dias} dia!`;
-    } else if (anos == 1 && meses == 0 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano e ${dias} dias!`;
-    } else if (anos == 1 && meses == 1 && dias == 0) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano e ${meses} mês!`;
-    } else if (anos == 1 && meses == 1 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano, ${meses} mês e ${dias} dia!`;
-    } else if (anos == 1 && meses == 1 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano, ${meses} mês e ${dias} dias!`;
-    } else if (anos == 1 && meses > 1 && dias == 0) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano e ${meses} meses!`;
-    } else if (anos == 1 && meses > 1 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano, ${meses} meses e ${dias} dia!`;
-    } else if (anos == 1 && meses > 1 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} ano, ${meses} meses e ${dias} dias!`;
-    } else if (anos > 1 && meses == 0 && dias == 0) {
-      diasContador.textContent = `Estamos completando ${anos} anos juntos!`;
-    } else if (anos > 1 && meses == 0 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos e ${dias} dia!`;
-    } else if (anos > 1 && meses == 0 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos e ${dias} dias!`;
-    } else if (anos > 1 && meses == 1 && dias == 0) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos e ${meses} mês!`;
-    } else if (anos > 1 && meses == 1 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos, ${meses} mês e ${dias} dia!`;
-    } else if (anos > 1 && meses == 1 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos, ${meses} mês e ${dias} dias!`;
-    } else if (anos > 1 && meses > 1 && dias == 0) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos e ${meses} meses!`;
-    } else if (anos > 1 && meses > 1 && dias == 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos, ${meses} meses e ${dias} dia!`;
-    } else if (anos > 1 && meses > 1 && dias > 1) {
-      diasContador.textContent = `Estamos juntos há ${anos} anos, ${meses} meses e ${dias} dias!`;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
