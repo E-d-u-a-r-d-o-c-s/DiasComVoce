@@ -1,10 +1,14 @@
 const startBtn = document.getElementById('startBtn');
 const diasContador = document.getElementById('diasContador');
+const audio = document.querySelector('audio');
+
+audio.style.display = 'none';
 
 startBtn.addEventListener('click', () => {
     document.querySelector('header').style.display = 'none';
-    startBtn.style.display = 'none';
     document.querySelector('main').style.display = 'block';
+    startBtn.style.display = 'none';
+    audio.play();
 });
 
 // Contador de tempo desde o início do relacionamento
