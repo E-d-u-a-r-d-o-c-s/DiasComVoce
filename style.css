@@ -20,6 +20,7 @@ header {
 .center-btn {
     font-size: 24px;
     padding: 15px 30px;
+    color: white;
     background-color: #f51414;
     border: none;
     border-radius: 50px;
@@ -38,9 +39,9 @@ header {
 }
 
 .center-btn:hover {
+    font-size: 30px;
     background-color: #FA0707;
     box-shadow: 0 0px 60px #000000c4;
-    transform: scale(1.05);
 }
 
 main {
@@ -68,7 +69,7 @@ h1 {
     width: 300px;
     height: 430px;
     border-radius: 10px;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 
 .carousel img {
@@ -107,13 +108,46 @@ h1 {
     text-align: center;
 }
 
+.vivencias {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    justify-content: center;    
+    margin: auto;
+    display: flex;
+    background-color: #f51414;
+    width: 500px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+    animation: animateA 2s steps(5) infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes animateA {
+    0%, 94%, 100% { 
+        filter: none;
+    }
+    95% { 
+        filter: drop-shadow(0 0 10px #ff4e4e) drop-shadow(0 0 150px #ff4e4e);
+    }
+}
+
+.vivencias:hover {
+    background-color: #FA0707;
+    box-shadow: 0 0px 60px #000000c4;
+    transform: scale(1.05);
+}
+
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 30px;
         width: 88vw;
     }
 
-    .footer {
+    .footer, .vivencias {
         width: 85vw;
     }
 
