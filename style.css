@@ -1,13 +1,16 @@
+/* Reset básico: remove margens e preenchimentos padrão */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Estilos do corpo: fonte e fundo radial */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: radial-gradient(#a01717,#2e2a2a);
 }
 
+/* Cabeçalho: ocupa a tela inteira e centraliza conteúdo em coluna */
 header {
     height: 100vh;
     display: flex;
@@ -17,6 +20,7 @@ header {
     align-content: flex-start;
 }
 
+/* Botão central: aparência, tamanho, cor e animação */
 .center-btn {
     font-size: 24px;
     padding: 15px 30px;
@@ -29,26 +33,31 @@ header {
     animation: animateBtn 2s steps(10) infinite;
 }
 
-@keyframes animateBtn {
-    0%, 94%, 100% { 
-        filter: none;
-    }
-    95% { 
-        filter: drop-shadow(0 0 50px #ff4e4e) drop-shadow(0 0 150px #ff4e4e);
-    }
-}
-
+/* Estado hover do botão: aumenta um pouco e muda sombra/cor */
 .center-btn:hover {
     font-size: 30px;
     background-color: #FA0707;
     box-shadow: 0 0px 60px #000000c4;
 }
 
+/* Keyframes para o efeito de brilho do botão */
+@keyframes animateBtn {
+    0%, 94%, 100% { 
+        filter: none;
+    }
+    95% { 
+        /* Pulsação de brilho usando drop-shadow */
+        filter: drop-shadow(0 0 50px #ff4e4e) drop-shadow(0 0 150px #ff4e4e);
+    }
+}
+
+/* Main inicialmente escondido (aparecerá via JS possivelmente) */
 main {
     display: none;
     margin-top: 10px;
 }
 
+/* Título principal: cor, centralização, tamanho e caixa */
 h1 {
     color: white;
     text-align: center;
@@ -59,12 +68,11 @@ h1 {
     margin: auto;
     border-radius: 10px;
     margin-bottom: 10px;
-
 }
 
+/* Carrossel: container com overflow oculto e dimensão fixa */
 .carousel {
     margin: auto;
-    white-space: nowrap;
     overflow: hidden;
     width: 300px;
     height: 430px;
@@ -72,20 +80,36 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* track que contém a sequência (será duplicada por JS) */
+.carousel .track {
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+}
+
 .carousel img {
     width: 300px;
     height: 430px;
+    margin-left: 10px;
     object-fit: cover;
-    display: inline-block;
-    animation: slide 20s linear infinite;
+    flex: 0 0 auto;
     border-radius: 10px;
 }
 
-@keyframes slide {
-0% { transform: translateX(0); }
-100% { transform: translateX(-3790px); } /* 300px * 6 imagens */
+/* desloca 50% (uma sequência) para criar loop contínuo */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
+/* pausa ao passar o mouse */
+.carousel:hover .track {
+    animation-play-state: paused;
+}
+
+/* Rodapé estilizado: caixa centralizada com texto justificado */
 .footer {
     margin: auto;
     padding: 20px;
@@ -98,16 +122,19 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Parágrafo no footer: recuo na primeira linha */
 .footer p {
     text-indent: 20px;
 }
 
+/* Contador de dias: destaque do texto */
 #diasContador {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
 }
 
+/* Botão/elemento "vivencias": aparência, layout e animação similar ao botão central */
 .vivencias {
     color: white;
     font-size: 24px;
@@ -126,6 +153,14 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Hover de vivencias: leve escala e sombra mais forte */
+.vivencias:hover {
+    background-color: #FA0707;
+    box-shadow: 0 0px 60px #000000c4;
+    transform: scale(1.05);
+}
+
+/* Keyframes para brilho do elemento vivencias */
 @keyframes animateA {
     0%, 94%, 100% { 
         filter: none;
@@ -135,26 +170,20 @@ h1 {
     }
 }
 
-.vivencias:hover {
-    background-color: #FA0707;
-    box-shadow: 0 0px 60px #000000c4;
-    transform: scale(1.05);
-}
 
+/* Responsividade para telas pequenas (<= 500px):
+   Ajusta tamanhos e larguras para melhor encaixe em mobile */
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 30px;
         width: 88vw;
     }
-
     .footer, .vivencias {
         width: 85vw;
     }
-
     .carousel {
         width: 93vw;
     }
-
     .carousel img {
         width: 85vw;
         height: 500px;

@@ -41,3 +41,22 @@ if (anos === 0 && meses === 0 && dias === 0) {
 } else {
     diasContador.textContent = `Estamos juntos há ${formatarTempo(anos, meses, dias)}!`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel .track');
+  if (!track) return;
+
+  // duplicar conteúdo para loop contínuo
+  track.innerHTML = track.innerHTML + track.innerHTML;
+
+  // ajustar duração com base na largura para velocidade constante
+  const singleWidth = track.scrollWidth / 2; // largura de uma sequência
+  const speedPxPerSec = 60; // ajuste a velocidade (px/s) conforme desejar
+  const duration = Math.max(30, Math.round(singleWidth / speedPxPerSec)); // mínimo 10s
+
+  track.style.animation = `scroll ${duration}s linear infinite`;
+
+  // permitir pausa com hover via JS (fallback)
+  track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+  track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
+});
