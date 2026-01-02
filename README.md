@@ -1,2 +1,2 @@
 # DiasComVoce
- Período de relacinamento
+ Período de relacionamento
