@@ -14,11 +14,24 @@ startBtn.addEventListener('click', () => {
 
 // Contador de tempo desde o início do relacionamento
 const dataInicio = new Date('2025-03-02'); // Data do início do relacionamento
-const hoje = new Date();
+const hoje = new Date(); // Data atual para cálculo
 
 let anos = hoje.getFullYear() - dataInicio.getFullYear();
 let meses = hoje.getMonth() - dataInicio.getMonth();
 let dias = hoje.getDate() - (dataInicio.getDate() + 1);
+
+// Ajustar se meses for negativo
+if (meses < 0) {
+    anos--;
+    meses += 12;
+}
+
+// Ajustar se dias for negativo
+if (dias < 0) {
+    meses--;
+    const dataAnterior = new Date(hoje.getFullYear(), hoje.getMonth(), 0);
+    dias += dataAnterior.getDate();
+}
 
 function morforlogia(value, singular, plural) {
     return value === 1 ? singular : plural;
